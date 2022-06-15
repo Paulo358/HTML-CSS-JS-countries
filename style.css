@@ -1,7 +1,36 @@
+#countryList__ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+}
+
 .countryCard {
   display: flex;
   flex-flow: column wrap;
   border: 1px solid black;
+  width: 100%;
+  max-width: 300px;
   padding: 10px;
   margin: 10px;
+}
+.countryCard .countryCard__flag {
+  width: 300px;
+  height: 200px;
+}
+.countryCard .Africa {
+  background-color: green;
+}
+.countryCard .America {
+  background-color: yellow;
+}
+.countryCard .Asia {
+  background-color: red;
+}
+.countryCard .Europe {
+  background-color: purple;
+}
+.countryCard .Oceania {
+  background-color: blue;
 }/*# sourceMappingURL=style.css.map */
