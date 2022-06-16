@@ -44,10 +44,10 @@ body
             &.Oceania
                 background-color: lightblue
 
-            &:hover .flip-card-inner
+            &:hover .countryCard__flip-card-inner
                 transform: rotateY(180deg)
 
-            .flip-card-inner
+            .countryCard__flip-card-inner
                 position: relative
                 width: 100%
                 height: 100%
@@ -55,13 +55,13 @@ body
                 transition: transform 0.8s
                 transform-style: preserve-3d
 
-            .flip-card-front, .flip-card-back
+            .countryCard__flip-card-front, .countryCard__flip-card-back
                 position: absolute
                 width: 100%
                 height: 100%
                 -webkit-backface-visibility: hidden
                 backface-visibility: hidden
 
-            .flip-card-back
+            .countryCard__flip-card-back
                 transform: rotateY(180deg)
 

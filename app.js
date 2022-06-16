@@ -11,11 +11,11 @@ const fetchCountries = async () => {
 
         const countriesEach = `
         <li class="countryCard ${country.region}">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
+            <div class="countryCard__flip-card-inner">
+                <div class="countryCard__flip-card-front">
                     <img class="countryCard__flag" alt="${country.name}" src="${country.flags.png}" />
                 </div>
-                <div class="flip-card-back">
+                <div class="countryCard__flip-card-back">
                     <h3>${country.name}</h3>
                     <p>Nome nativo: ${country.nativeName}</p>
                     <p>Capital: ${country.capital}</p>

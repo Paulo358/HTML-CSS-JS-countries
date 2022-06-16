@@ -72,12 +72,12 @@ body {
   background-color: lightblue;
 }
 
-.countryList #countryList__ul .countryCard:hover .flip-card-inner {
+.countryList #countryList__ul .countryCard:hover .countryCard__flip-card-inner {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
 }
 
-.countryList #countryList__ul .countryCard .flip-card-inner {
+.countryList #countryList__ul .countryCard .countryCard__flip-card-inner {
   position: relative;
   width: 100%;
   height: 100%;
@@ -90,7 +90,7 @@ body {
           transform-style: preserve-3d;
 }
 
-.countryList #countryList__ul .countryCard .flip-card-front, .countryList #countryList__ul .countryCard .flip-card-back {
+.countryList #countryList__ul .countryCard .countryCard__flip-card-front, .countryList #countryList__ul .countryCard .countryCard__flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -98,7 +98,7 @@ body {
   backface-visibility: hidden;
 }
 
-.countryList #countryList__ul .countryCard .flip-card-back {
+.countryList #countryList__ul .countryCard .countryCard__flip-card-back {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
 }
