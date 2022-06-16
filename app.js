@@ -7,26 +7,28 @@ const fetchCountries = async () => {
 
     let countriesLi = ''
 
-    countriesArray[0].forEach(country => {
+    if (countriesArray.length !== 0) {
+        countriesArray[0].forEach(country => {
 
-        const countriesEach = `
-        <li class="countryCard ${country.region}">
-            <div class="countryCard__flip-card-inner">
-                <div class="countryCard__flip-card-front">
-                    <img class="countryCard__flag" alt="${country.name}" src="${country.flags.png}" />
+            const countriesEach = `
+            <li class="countryCard ${country.region}">
+                <div class="countryCard__flip-card-inner">
+                    <div class="countryCard__flip-card-front">
+                        <img class="countryCard__flag" alt="${country.name}" src="${country.flags.png}" />
+                    </div>
+                    <div class="countryCard__flip-card-back">
+                        <h3>${country.name}</h3>
+                        <p>Nome nativo: ${country.nativeName}</p>
+                        <p>Capital: ${country.capital}</p>
+                        <p>Região: ${country.region}</p>
+                        <p>Sub-região: ${country.subregion}</p>
+                    </div>
                 </div>
-                <div class="countryCard__flip-card-back">
-                    <h3>${country.name}</h3>
-                    <p>Nome nativo: ${country.nativeName}</p>
-                    <p>Capital: ${country.capital}</p>
-                    <p>Região: ${country.region}</p>
-                    <p>Sub-região: ${country.subregion}</p>
-                </div>
-            </div>
-        </li>
-        `
-        countriesLi += countriesEach
-    })
+            </li>
+            `
+            countriesLi += countriesEach
+        })
+    }
 
         const ul = document.getElementById('countryList__ul')
         ul.innerHTML = countriesLi
