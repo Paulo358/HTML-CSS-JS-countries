@@ -5,18 +5,24 @@ const fetchCountries = async () => {
 
     countriesArray.push(await fetch(url("all")).then(res => res.json()))
 
-    console.log(countriesArray[0])
-
     let countriesLi = ''
 
     countriesArray[0].forEach(country => {
 
         const countriesEach = `
         <li class="countryCard ${country.region}">
-            <img class="countryCard__flag" alt="${country.name}" src="${country.flags.png}" />
-            <h3>${country.name}</h3>
-            <p>Capital: ${country.name}</p>
-            <p>Região: ${country.region}</p>
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img class="countryCard__flag" alt="${country.name}" src="${country.flags.png}" />
+                </div>
+                <div class="flip-card-back">
+                    <h3>${country.name}</h3>
+                    <p>Nome nativo: ${country.nativeName}</p>
+                    <p>Capital: ${country.capital}</p>
+                    <p>Região: ${country.region}</p>
+                    <p>Sub-região: ${country.subregion}</p>
+                </div>
+            </div>
         </li>
         `
         countriesLi += countriesEach
